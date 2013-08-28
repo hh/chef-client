@@ -99,6 +99,6 @@ else
     path    node['chef_client']['cron']['path'] if node['chef_client']['cron']['path']
     user    "root"
     shell   "/bin/bash"
-    command "/bin/sleep #{sleep_time}; #{env} #{client_bin} &> #{log_file}"
+    command "/bin/sleep #{sleep_time}; #{env} #{client_bin} &>> #{log_file}"
   end
 end
